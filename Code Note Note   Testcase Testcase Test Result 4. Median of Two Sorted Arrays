@@ -1,0 +1,16 @@
+ i=j=0
+        n1,n2 = len(nums1), len(nums2)
+        temp = []
+        for _ in range(n1 + n2):
+            if i <n1 and ( j >= n2 or nums1[i] <= nums2[j]):
+                temp.append(nums1[i])
+                i += 1
+            else:
+                temp.append(nums2[j])
+                j += 1
+        n = len(temp)
+        if(n % 2 == 0):
+            return (temp[n//2-1] + temp[n//2])/2 
+        else:
+            return (temp[n//2])
+            
